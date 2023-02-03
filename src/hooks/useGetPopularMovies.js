@@ -10,7 +10,7 @@ export const useGetPopularMovies = () => {
     useEffect(() => {
         
         const fetchMovies = () => {
-            fetch(`${apiURL}/popular?api_key=${apiKey}&language=en-US&page=1`)
+            fetch(`${apiURL}/popular?api_key=${apiKey}&language=pt-BR&page=1`)
                             .then(res => res.json())
                             .then(data => {
                                 setMovies(data)

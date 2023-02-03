@@ -17,7 +17,7 @@ const Home = () => {
   return (
     <div id="home">
         
-        <h1>Movies</h1>
+        <h1>Filmes</h1>
 
         <ul>
           {apiMovies && apiMovies.results.map(movie => (
