@@ -9,8 +9,8 @@ export const useGetRelatedMovies = (query) => {
 
     useEffect(() => {
 
-        const searchForMovies = async() => {
-            await  fetch(`${searchMovieURL}?api_key=${apiKey}&language=pt-BR&page=1&include_adult=false&query=${query}`)
+        const searchForMovies = () => {
+            fetch(`${searchMovieURL}?api_key=${apiKey}&language=pt-BR&page=1&include_adult=false&query=${query}`)
             .then(res => res.json())
             .then(data => {
                 setRelatedMovies(data)

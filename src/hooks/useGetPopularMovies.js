@@ -12,9 +12,7 @@ export const useGetPopularMovies = () => {
         const fetchMovies = () => {
             fetch(`${apiURL}/popular?api_key=${apiKey}&language=pt-BR&page=1`)
                             .then(res => res.json())
-                            .then(data => {
-                                setMovies(data)
-                            })
+                            .then(data => setMovies(data))
         }
         fetchMovies()
     }, [])

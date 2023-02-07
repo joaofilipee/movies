@@ -5,7 +5,7 @@ import "./SearchedMovies.css"
 import imageNotFound from "../../notFound/imageNotFound.jpg"
 
 // hooks
-import { useParams } from "react-router-dom"
+import { useSearchParams, useNavigate } from "react-router-dom"
 import { useGetRelatedMovies } from "../../hooks/useGetRelatedMovies"
 
 // Image URL
@@ -13,7 +13,14 @@ import { imgURL } from "../../api/ApiKey"
 
 const SearchedMovies = () => {
 
-    const { query } = useParams()
+    const navigate = useNavigate()
+
+    const navigateToDetails = (movieId) => {
+      navigate(`/details/${movieId}`)
+    }
+
+    const [searchParams] = useSearchParams()
+    const query = searchParams.get("query")
 
     const data =  useGetRelatedMovies(query)
     
@@ -23,11 +30,12 @@ const SearchedMovies = () => {
 
         <ul>
           {data && data.results.map(movie => (
-            <li key={movie.id}>
+            <li key={movie.id} className="movie">
               <a href="https://google.com.br">
                 <img src={movie.poster_path ? `${imgURL}${movie.poster_path}` : imageNotFound} alt={query} />
                 </a>
               <span>{movie.title}</span>
+              <button onClick={() => navigateToDetails(movie.id)}>Ver detalhes</button>
             </li>
           ))}
 

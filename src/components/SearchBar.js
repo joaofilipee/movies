@@ -20,14 +20,18 @@ const SearchBar = () => {
     }
 
     const handleSearch = () => {
-        navigate(`/search/${searchContent}`)
+        
+        if(searchContent.length > 0) {
+            navigate(`/search?query=${searchContent}`)
+        }
+
         setSearchContent("")
     }
 
   return (
     <div>
         <form onSubmit={handleSubmit} className="search-form">
-            <input type="text" value={searchContent} onChange={(e) => setSearchContent(e.target.value)} />
+            <input placeholder="Pesquisar" type="text" value={searchContent} onChange={(e) => setSearchContent(e.target.value)} />
             <button onClick={handleSearch}> <AiOutlineSearch /> </button>
         </form>
     </div>

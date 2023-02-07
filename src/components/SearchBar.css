@@ -5,13 +5,16 @@
 
 .search-form input {
     height: 1.9rem;
-    width: 25em;
+    width: 20em;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 
     position: relative;
-    left: 25px;
 
-    font-size: 18px;
-    /* border-radius: 3px; */
+    font-size: 17px;
+
+    padding: 0 8px;
 }
 
 .search-form input:focus {
@@ -21,12 +24,16 @@
 .search-form button {
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    width: 25px;
-    background-color: transparent;
+    width: 3rem;
+    background-color: #3b3737;
     position: relative;
-    left: -3px;
     border: none;
+    border-top-right-radius: 42%;
+    border-bottom-right-radius: 42%;
+
+    border-collapse: collapse;
 }
 
 .search-form button:hover {
@@ -34,4 +41,5 @@
 } 
 .search-form svg {
     font-size: 25px;
+    color: #f6f6f6;
 }
