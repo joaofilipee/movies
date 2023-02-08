@@ -28,11 +28,11 @@ img {
     margin-bottom: 2rem;
 }
 
-a {
+.banner {
     transition: all 0.3s;
 }
 
-a:hover {
+.banner:hover {
     transform: scale(1.1);
 }
 

@@ -9,7 +9,7 @@ import SearchedMovies from './pages/SearchedMovies/SearchedMovies';
 import Details from './pages/Details/Details';
 
 // Components
-import SearchBar from './components/SearchBar';
+import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
 

@@ -1,6 +1,8 @@
 #searchedmovies h1 {
     text-align: center;
     margin: 4rem 0;
+
+    padding: 0 1rem;
 }
 
 #searchedmovies ul {
