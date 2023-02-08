@@ -43,3 +43,17 @@
 .release-date {
     color: gray;
 }
+
+.go-back {
+    height: 30px;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 4px;
+    background-color: rgb(26, 168, 97);
+    transition: background-color 0.3s;
+}
+
+.go-back:hover {
+    background-color: #fafafa;
+}

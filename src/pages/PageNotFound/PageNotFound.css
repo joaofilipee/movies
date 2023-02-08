@@ -1,0 +1,11 @@
+.red {
+    color: red;
+}
+
+#not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 4rem;
+}

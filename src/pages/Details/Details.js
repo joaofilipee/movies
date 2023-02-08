@@ -46,7 +46,7 @@ const Details = () => {
                     <h2>{movieDetails.title}</h2>
                     <p className="overview">{movieDetails.overview}</p>
                     <p className="release-date">Data de lançamento: {movieDetails.release_date.split("-").reverse().join("/")}</p>
-                    <button onClick={backToResultsPage}>Voltar</button>
+                    <button className="go-back" onClick={backToResultsPage}>Voltar</button>
                 </div>
             </div>
             )}
