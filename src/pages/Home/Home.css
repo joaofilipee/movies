@@ -1,6 +1,7 @@
 #home h1 {
     text-align: center;
     margin: 4rem 0;
+
 }
 
 #home ul {
@@ -9,6 +10,8 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: 3rem;
     row-gap: 4rem;
+
+    padding: 2rem;
 }
 
 ul li {

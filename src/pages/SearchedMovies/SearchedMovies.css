@@ -9,4 +9,14 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     column-gap: 3rem;
     row-gap: 4rem;
+
+    padding: 0 2rem;
+}
+
+#searchedmovies h1 span{
+    color: #90cea1;
+}
+
+#searchedmovies {
+    margin-bottom: 4rem;
 }

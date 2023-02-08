@@ -5,6 +5,9 @@ import "./Home.css"
 import { useGetPopularMovies } from "../../hooks/useGetPopularMovies"
 import { useNavigate } from "react-router-dom"
 
+// context
+import { SearchedQueryContext } from "../../context/SearchedQueryContext"
+import { useContext } from "react"
 
 
 // image URL
@@ -12,11 +15,14 @@ const imgURL = "https://image.tmdb.org/t/p/w500"
 
 const Home = () => {
 
+  const { setSearchedQuery } = useContext(SearchedQueryContext)
+
   const navigate = useNavigate()
 
   const apiMovies = useGetPopularMovies()
 
   const navigateToDetails = (movieId) => {
+    setSearchedQuery(null)
     navigate(`/details/${movieId}`)
   }
 

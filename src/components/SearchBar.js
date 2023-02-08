@@ -1,10 +1,10 @@
 import "./SearchBar.css"
 
 // icons
-import { AiOutlineSearch } from "react-icons/ai"
+import { AiOutlineSearch, AiFillHome } from "react-icons/ai"
 
 // router
-import { useNavigate } from "react-router-dom"
+import { useNavigate, NavLink } from "react-router-dom"
 
 // hooks
 import { useState } from "react"
@@ -29,10 +29,14 @@ const SearchBar = () => {
     }
 
   return (
-    <div>
+    <div id="search-bar">
+        <div className="logo">
+            <NavLink to="/"><h1 className="popular"> Populares </h1> <h1 className="home"><AiFillHome /></h1></NavLink>
+        </div>
+
         <form onSubmit={handleSubmit} className="search-form">
-            <input placeholder="Pesquisar" type="text" value={searchContent} onChange={(e) => setSearchContent(e.target.value)} />
-            <button onClick={handleSearch}> <AiOutlineSearch /> </button>
+            <input placeholder="Nome do filme" type="text" value={searchContent} onChange={(e) => setSearchContent(e.target.value)} />
+            <button className="search-button" onClick={handleSearch}> <AiOutlineSearch /> </button>
         </form>
     </div>
   )

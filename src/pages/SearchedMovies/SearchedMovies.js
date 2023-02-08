@@ -1,32 +1,41 @@
 
 import "./SearchedMovies.css"
 
+// context
+import { SearchedQueryContext } from "../../context/SearchedQueryContext"
+
+
 // image not found
 import imageNotFound from "../../notFound/imageNotFound.jpg"
 
 // hooks
 import { useSearchParams, useNavigate } from "react-router-dom"
 import { useGetRelatedMovies } from "../../hooks/useGetRelatedMovies"
+import { useContext } from "react"
 
 // Image URL
 import { imgURL } from "../../api/ApiKey"
 
 const SearchedMovies = () => {
 
+    const [searchParams] = useSearchParams()
+    const query = searchParams.get("query")
+
+    const { setSearchedQuery } = useContext(SearchedQueryContext)
+
     const navigate = useNavigate()
 
     const navigateToDetails = (movieId) => {
+
+      setSearchedQuery(query)
       navigate(`/details/${movieId}`)
     }
-
-    const [searchParams] = useSearchParams()
-    const query = searchParams.get("query")
 
     const data =  useGetRelatedMovies(query)
     
   return (
-    <div id="searchedmovies">
-        <h1>Filmes Relacionados à: {query}</h1>
+    <section id="searchedmovies">
+        <h1>Filmes Relacionados À: <span>{query}</span></h1>
 
         <ul>
           {data && data.results.map(movie => (
@@ -41,7 +50,7 @@ const SearchedMovies = () => {
 
         </ul>
 
-    </div>
+    </section>
   )
 }
 

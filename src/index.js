@@ -3,10 +3,17 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App.js';
 
+// provider
+import { SearchedQueryContextProvider } from './context/SearchedQueryContext';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+
+    <SearchedQueryContextProvider>
+      <App />
+    </SearchedQueryContextProvider>
+
   </React.StrictMode>
 );
 
