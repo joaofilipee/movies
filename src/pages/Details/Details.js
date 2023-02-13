@@ -44,7 +44,7 @@ const Details = () => {
 
                 <div className="movie-details">
                     <h2>{movieDetails.title}</h2>
-                    <p className="overview">{movieDetails.overview}</p>
+                    <p className="overview">{movieDetails.overview ? movieDetails.overview : "Descrição indisponível"}</p>
                     <p className="release-date">Data de lançamento: {movieDetails.release_date.split("-").reverse().join("/")}</p>
                     <button className="go-back" onClick={backToResultsPage}>Voltar</button>
                 </div>
