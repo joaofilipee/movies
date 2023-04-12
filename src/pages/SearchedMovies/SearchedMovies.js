@@ -22,7 +22,7 @@ const SearchedMovies = () => {
         
         {data && data.results.length > 0 ? (
           <div>
-            <h1>Filmes Relacionados À: <span>{query}</span></h1>
+            <h1>Filmes Relacionados A: <span>{query}</span></h1>
             <ul>
               {data.results.map(movie => (
                 <MoviesList key={movie.id} movie={movie} />
