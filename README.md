@@ -57,7 +57,7 @@ The main features of the application are:
  - You can see a movie details.
 
 ## Links
-  - Deploy on Vercel: https://movies-nine-psi.vercel.app/details/315162
+  - Deploy on Vercel: https://movies-nine-psi.vercel.app
   - Repository: https://github.com/joaofilipee/movies
     - In case of sensitive bugs like security vulnerabilities, please contact
       joao1filipe@outlook.com directly instead of using issue tracker.
