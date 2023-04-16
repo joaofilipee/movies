@@ -3,7 +3,8 @@
 # Movies
 This is an App that you can search for movies. 
 <br /> <br />
-In this app you can search for movies, see the popular movies and see movie's details.
+In this app you can search for movies, see the popular movies and see movie's details. <br />
+You can see the movie's title, the description (if that is avaible) and the release date (if that is avaible).
 
 
 ## Technology 
@@ -37,27 +38,27 @@ Here are the technologies I used in this project.
 
 ### 1 - When you access the website, you will see popular movies page first.
 
-![Sign In Page](https://github.com/joaofilipee/financeapp/blob/main/public/readme/signIn.png)
+![Popular Movies Page](https://github.com/joaofilipee/movies/blob/main/public/readme/popularMovies.png)
 
-### 2 - If you don't have an account yet, you can look to the right side of the form, and you will see a Sign Up button, it will take you to the Sign Up page.
+### 2 - When you type in the searchbar and press enter, you can see movies related to your searched word. For this example, I used the "gato" word.
 
-![Sign Up page](https://github.com/joaofilipee/financeapp/blob/main/public/readme/signUp.png)
+![Search Page](https://github.com/joaofilipee/movies/blob/main/public/readme/searchedMovies.png)
 
-### 3 - When you finaly created your account and signed in, you will see the home page :D
+### 3 - You can also see the details of the movie, you can press the "Ver detalhes" button to see it's details.
 
-![Home Page](https://github.com/joaofilipee/financeapp/blob/main/public/readme/home.png)
-
+![Details Page](https://github.com/joaofilipee/movies/blob/main/public/readme/detailsPage.png)
+### 4 - Enjoy it. :D
 
 ## Features
 
 The main features of the application are:
- - Add financial income or expense.
- - Remove financial income or expense.
- - It updates every change.
+ - You can see the actual popular movies.
+ - You can search for movies.
+ - You can see a movie details.
 
 ## Links
-  - Deploy on Vercel: https://financeapp-iota.vercel.app
-  - Repository: https://github.com/joaofilipee/financeapp
+  - Deploy on Vercel: https://movies-nine-psi.vercel.app/details/315162
+  - Repository: https://github.com/joaofilipee/movies
     - In case of sensitive bugs like security vulnerabilities, please contact
       joao1filipe@outlook.com directly instead of using issue tracker.
 
